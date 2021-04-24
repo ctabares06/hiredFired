@@ -1,41 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { CurriculumsContext } from '../../context/CurriculumsContext'; 
 import CurriculumCard from "../../components/curriculumCard/CurriculumCard";
 import CurriculumsContainer from "../../components/curriculumsContainer/CurriculumsContainer";
-import { getCurriculums } from "../../services/curriculums/getCurriculums";
-import { typeCurriculums } from "../../types";
 
-type typeComponentProps = {
-  functions : Array<(curriculums : typeCurriculums[]) => void>,
-  status : Array<typeCurriculums[]>
-}
-
-const Curriculums: React.FC<typeComponentProps> = ({ functions, status }) => {
-  const [people, hired] = status;
-  const [setPeople, setHired] = functions;
-
-  useEffect(() => {
-    let isMounted = false;
-    getCurriculums().then(people => {
-      if (!isMounted) {
-        setPeople(people)
-      }
-    })
-      .catch(err => console.log(err));
-    return () => { isMounted = true };
-  }, []);
+const Curriculums: React.FC<{}> = () => {
+  
+  const context = useContext(CurriculumsContext);
+  const { curriculums } = context!.states;
 
   return (
     <div>
       <CurriculumsContainer>
         {
-          people.map(curriculum => {
+          curriculums.map(curriculum => {
             return (
-              <CurriculumCard 
-                data={curriculum} 
-                functions={[setPeople, setHired]}
-                status={[people, hired]}
-                key={curriculum.id}
-              />
+              <CurriculumCard data={curriculum} key={curriculum.id} />
             )
           })
         }

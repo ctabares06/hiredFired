@@ -1,5 +1,5 @@
-import React from 'react';
-import { typeCurriculums } from '../../types';
+import React, { useContext } from 'react';
+import { CurriculumsContext } from '../../context/CurriculumsContext';
 
 type typeComponentProps = {
   data : {
@@ -9,21 +9,20 @@ type typeComponentProps = {
     lastName: string,
     picture: string
   },
-  functions : Array<(curriculums : typeCurriculums[]) => void>,
-  status : Array<typeCurriculums[]>
 }
 
-const CurriculumCard: React.FC<typeComponentProps> = ({ data, functions, status }) => {
+const CurriculumCard: React.FC<typeComponentProps> = ({ data }) => {
   
   const {id, email, firstName, lastName, picture} = data;
-  const [people, hired] = status;
-  const [setPeople, setHired] = functions;
+  const context = useContext(CurriculumsContext);
+  const { curriculums, hired } = context!.states;
+  const {setCurriculums, setHired} = context!.functions;
 
   const hiredDispatcher = (event : React.MouseEvent<HTMLButtonElement>) => {
     const id = event.currentTarget.dataset.id;
-    setPeople(people.filter(person => person.id !== id));
+    setCurriculums(curriculums.filter(person => person.id !== id));
     const newHired = [...hired];
-    newHired.push(people[people.findIndex(person => person.id === id)]);
+    newHired.push(curriculums[curriculums.findIndex(person => person.id === id)]);
     setHired(newHired);
   }
 

@@ -1,17 +1,12 @@
-import React from 'react';
-import { typeCurriculums } from '../../types';
+import React, { useContext } from 'react';
 import CurriculumsContainer from '../../components/curriculumsContainer/CurriculumsContainer';
 import CurriculumCard from '../../components/curriculumCard/CurriculumCard';
+import { CurriculumsContext } from '../../context/CurriculumsContext';
 import './Hired.scss';
 
-type typeComponentProps = {
-  functions : Array<(curriculums : typeCurriculums[]) => void>,
-  status : Array<typeCurriculums[]>
-}
-
-const Hired: React.FC<typeComponentProps> = ({ functions, status }) => {
-  const [people, hired] = status;
-  const [setPeople, setHired] = functions;
+const Hired: React.FC<{}> = () => {
+  const context = useContext(CurriculumsContext);
+  const { hired } = context!.states;
 
   return (
     <div>
@@ -21,8 +16,6 @@ const Hired: React.FC<typeComponentProps> = ({ functions, status }) => {
             return (
               <CurriculumCard 
                 data={curriculum} 
-                functions={[setPeople, setHired]}
-                status={[people, hired]}
                 key={curriculum.id}
               />
             )

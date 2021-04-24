@@ -4,9 +4,9 @@ import { typeCurriculums } from '../types';
 
 type typeCurriculumsContext = {
   functions: {
-    curriculums?: (curriculums: typeCurriculums[]) => void,
-    hired?: (curriculums: typeCurriculums[]) => void,
-    fired?: (curriculums: typeCurriculums[]) => void,
+    setCurriculums: (curriculums: typeCurriculums[]) => void,
+    setHired: (curriculums: typeCurriculums[]) => void,
+    setFired: (curriculums: typeCurriculums[]) => void,
   },
   states: {
     curriculums: typeCurriculums[],
@@ -15,14 +15,7 @@ type typeCurriculumsContext = {
   }
 }
 
-export const CurriculumsContext = React.createContext<typeCurriculumsContext>({
-  functions: {},
-  states: {
-    curriculums: [],
-    hired: [],
-    fired: []
-  },
-});
+export const CurriculumsContext = React.createContext<typeCurriculumsContext | null>(null);
 
 const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
 
@@ -39,9 +32,9 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
 
   const global: typeCurriculumsContext = {
     functions: {
-      curriculums: setCurriculums,
-      hired: setHired,
-      fired: setFired
+      setCurriculums: setCurriculums,
+      setHired: setHired,
+      setFired: setFired
     },
     states: { curriculums, hired, fired }
   };
