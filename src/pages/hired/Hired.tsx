@@ -17,6 +17,8 @@ const Hired: React.FC<{}> = () => {
               <CurriculumCard 
                 data={curriculum} 
                 key={curriculum.id}
+                isHired={true}
+                isFired={false}
               />
             )
           })

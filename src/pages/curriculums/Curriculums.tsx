@@ -14,7 +14,12 @@ const Curriculums: React.FC<{}> = () => {
         {
           curriculums.map(curriculum => {
             return (
-              <CurriculumCard data={curriculum} key={curriculum.id} />
+              <CurriculumCard 
+                data={curriculum} 
+                key={curriculum.id}
+                isHired={false}
+                isFired={false}
+              />
             )
           })
         }
