@@ -39,11 +39,11 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
 
   const global: typeCurriculumsContext = {
     functions: {
-      curriculums : setCurriculums,
-      hired : setHired,
-      fired : setFired
+      curriculums: setCurriculums,
+      hired: setHired,
+      fired: setFired
     },
-    states: {curriculums, hired, fired}
+    states: { curriculums, hired, fired }
   };
 
   return (
