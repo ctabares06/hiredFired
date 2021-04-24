@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import CurriculumCard from "../../components/curriculumCard/CurriculumCard";
 import CurriculumsContainer from "../../components/curriculumsContainer/CurriculumsContainer";
 import { getCurriculums } from "../../services/curriculums/getCurriculums";
@@ -38,7 +38,6 @@ const Curriculums: React.FC<typeComponentProps> = ({ functions, status }) => {
               />
             )
           })
-
         }
       </CurriculumsContainer>
     </div>
