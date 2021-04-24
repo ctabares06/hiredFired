@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import 'Hired.scss';
+import React from 'react';
 import { typeCurriculums } from '../../types';
 import CurriculumsContainer from '../../components/curriculumsContainer/CurriculumsContainer';
 import CurriculumCard from '../../components/curriculumCard/CurriculumCard';
-import { getCurriculums } from '../../services/curriculums/getCurriculums';
+import './Hired.scss';
 
 type typeComponentProps = {
   functions : Array<(curriculums : typeCurriculums[]) => void>,
