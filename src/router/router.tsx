@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Curruculums from '../pages/curriculums/Curriculums';
+import Hired from '../pages/hired/Hired';
 import NotFound from '../pages/notFound/NotFound';
 import { typeCurriculums } from '../types';
 
@@ -15,6 +16,9 @@ const Router: React.FC = () => {
       <Switch>
         <Route exact path="/">
           <Curruculums status={[people, hired]} functions={[setPeople, setHired]} />
+        </Route>
+        <Route exact path="/hired">
+          <Hired status={[people, hired]} functions={[setPeople, setHired]} />
         </Route>
         <Route path="*">
           <NotFound />
