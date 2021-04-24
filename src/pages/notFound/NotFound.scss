@@ -1,0 +1,16 @@
+.notFound-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound-text {
+  font-size: 5em;
+  color: #000;
+}

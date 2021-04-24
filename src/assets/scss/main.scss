@@ -1,0 +1,20 @@
+@use 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, p, label {
+  margin: 0;
+}
