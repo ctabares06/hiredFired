@@ -5,3 +5,5 @@ export type typeCurriculums = {
   id: string,
   picture: string;
 }
+
+export type typeCurriculumStatus = "curriculums" | "hired" | "fired";

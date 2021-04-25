@@ -1,10 +1,8 @@
-import React, { useState }  from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
 import CurriculumsContextProvier from '../context/CurriculumsContext';
-import Curriculums from '../pages/curriculums/Curriculums';
-import Fired from '../pages/fired/Fired';
-import Hired from '../pages/hired/Hired';
+import Curriculums from '../components/curriculums/Curriculums';
 import NotFound from '../components/notFound/NotFound';
 
 const Router: React.FC = () => {
@@ -16,13 +14,13 @@ const Router: React.FC = () => {
         <CurriculumsContextProvier>
         <Switch>
           <Route exact path="/">
-            <Curriculums />
+            <Curriculums type="curriculums" />
           </Route>
           <Route path="/hired">
-            <Hired />
+            <Curriculums type="hired" />
           </Route>
           <Route path="/fired">
-            <Fired />
+            <Curriculums type="fired" />
           </Route>
           <Route path="*">
             <NotFound />
