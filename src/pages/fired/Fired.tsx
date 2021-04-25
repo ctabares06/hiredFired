@@ -1,24 +1,23 @@
 import React, { useContext } from "react";
-import { CurriculumsContext } from '../../context/CurriculumsContext'; 
 import CurriculumCard from "../../components/curriculumCard/CurriculumCard";
 import CurriculumsContainer from "../../components/curriculumsContainer/CurriculumsContainer";
+import { CurriculumsContext } from "../../context/CurriculumsContext";
 
-const Curriculums: React.FC<{}> = () => {
-  
+const Fired: React.FC = () => {
   const context = useContext(CurriculumsContext);
-  const { curriculums } = context!.states;
+  const { fired } = context!.states;
 
   return (
     <div>
       <CurriculumsContainer>
         {
-          curriculums.map(curriculum => {
+          fired.map(curriculum => {
             return (
               <CurriculumCard 
                 data={curriculum} 
                 key={curriculum.id}
                 isHired={false}
-                isFired={false}
+                isFired={true}
               />
             )
           })
@@ -28,5 +27,4 @@ const Curriculums: React.FC<{}> = () => {
   )
 }
 
-export default Curriculums;
-
+export default Fired;
