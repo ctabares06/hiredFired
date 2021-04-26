@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CurriculumsContext } from '../../context/CurriculumsContext';
 import { typeCurriculumStatus } from '../../types';
+import './CurriculumCard.scss';
 
 type typeComponentProps = {
   data : {
@@ -39,25 +40,25 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
       case "curriculums":
         return <button data-id={id} onClick={() => hiredDispatcher(id)}  className="card-button button-green">Hire</button>
       case "hired":
-        return <button data-id={id} onClick={() => firedDispatcher(id)}  className="card-button button-green">Fire</button>
+        return <button data-id={id} onClick={() => firedDispatcher(id)}  className="card-button button-red">Fire</button>
       default:
         return null;
     }
   }
 
   return (
-    <div className="card">
-      <div className="card-picture-container">
-        <img src={picture} alt={id} className="card-picture" />
+    <article className="curriculum-card">
+      <div className="curriculum-picture-container">
+        <img src={picture} alt={id} className="curriculum-picture" />
       </div>
-      <div className="card-body">
-        <h3 className="card-name">{firstName} - {lastName}</h3>
+      <div className="curriculum-body">
+        <h3 className="curriculum-name">{firstName} {lastName}</h3>
         <small>{email}</small>
       </div>
-      <div className="card-buttons">
+      <div className="curriculum-buttons">
         { buttonType(status) }
       </div>
-    </div>
+    </article>
   )
 }
 

@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { CurriculumsContext } from '../../context/CurriculumsContext'; 
+import { CurriculumsContext } from '../../context/CurriculumsContext';
 import { typeCurriculumStatus } from "../../types";
 import CurriculumCard from "../curriculumCard/CurriculumCard";
 import CurriculumsContainer from "../curriculumsContainer/CurriculumsContainer";
+import './Curriculums.scss';
 
 const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
-  
+
   const context = useContext(CurriculumsContext);
   const { curriculums, hired, fired } = context!.states;
   let selectedArray = [];
@@ -26,13 +27,14 @@ const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
   }
 
   return (
-    <div>
+    <section className="curriculums-page">
+      <h1>{type} people</h1>
       <CurriculumsContainer>
         {
           selectedArray.map(curriculum => {
             return (
-              <CurriculumCard 
-                data={curriculum} 
+              <CurriculumCard
+                data={curriculum}
                 status={type}
                 key={curriculum.id}
               />
@@ -40,7 +42,7 @@ const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
           })
         }
       </CurriculumsContainer>
-    </div>
+    </section>
   )
 }
 

@@ -1,0 +1,6 @@
+.curriculums-items-container {
+  display: grid;
+  column-gap: 2.25em;
+  row-gap: 1.5em;
+  grid-template-columns: repeat(4, 25%);
+}

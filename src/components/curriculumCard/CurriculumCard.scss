@@ -1,0 +1,77 @@
+@import '../../assets/scss/vars';
+
+.curriculum-card {
+  border : 1px solid $card-main-color;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin: 1em 1.5em;
+  padding:  1em 1em .5em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: ease-in-out .5s all;
+
+  .curriculum-picture-container {
+    text-align: center;
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border : 1px solid $card-main-color;
+      border-radius: 15px;
+      transition: ease-in-out .5s all;
+    }
+  }
+
+  .curriculum-body {
+    transition: inherit;
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .curriculum-buttons {
+    width: 100%;
+    margin-top: 1em;
+
+    button {
+      background-color: $card-main-color;
+      cursor: pointer;
+      color: #fff;
+      border: 2px solid $card-main-color;
+      border-radius: 10px;
+      font-size: 1em;
+      padding: .5em;
+      width: 100%;
+      transition: ease-in-out .2s all;
+    }
+
+    button.button-green:hover {
+      background-color: $button-green;
+      border: 2px solid $button-green;
+    }
+
+  }
+
+}
+
+.curriculum-card:hover {
+  background-color: $card-main-color;
+
+  .curriculum-picture-container {
+    img {
+      border : 1px solid #fff;
+    }
+  }
+
+  .curriculum-buttons {
+    button {
+      background-color: #fff;
+    }
+  }
+
+}
