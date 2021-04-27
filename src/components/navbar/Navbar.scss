@@ -1,0 +1,36 @@
+@import '../../assets/scss/vars';
+
+.nav-container {
+  margin: .5em 0px;
+  display: flex;
+
+  .nav-link {
+    text-decoration: none;
+    margin: 0px 1.5em;
+    color: $background-main-color;
+
+    .nav-link-bar {
+      width: 0%;
+      background-color: $background-main-color;
+      height: .25em;
+      transition: ease-out width .3s;
+    }
+  }
+
+  .nav-link.active {
+    
+    .nav-link-bar {
+      width: 100%;
+    }
+  }
+
+}
+
+.nav-link:hover {
+
+  .nav-link-bar {
+    width: 100%;
+    transition: ease-out width .3s;
+  }
+
+}

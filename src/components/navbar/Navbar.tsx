@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navbar.scss';
 
 const Navbar: React.FC = () => (
-  <nav>
-      <Link to="/hired" >Hired</Link>
-      <Link to="/fired" >Fired</Link>
-      <Link to="/" >Curriculums</Link>
+  <nav className="nav-container">
+      <NavLink className="nav-link" activeClassName="active" to="/hired" >
+        <span>Hired</span>
+        <div className="nav-link-bar"></div>
+      </NavLink>
+      <NavLink className="nav-link" activeClassName="active"  exact to="/" >
+        <span>Curriculums</span>
+        <div className="nav-link-bar"></div>
+      </NavLink>
+      <NavLink className="nav-link" activeClassName="active" to="/fired" >
+        <span>Fired</span>
+        <div className="nav-link-bar"></div>
+      </NavLink>
   </nav>
 )   
 
