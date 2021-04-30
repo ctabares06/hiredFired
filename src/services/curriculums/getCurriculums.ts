@@ -1,4 +1,4 @@
-import { typeCurriculums } from "../../types"
+import { typeCurriculums } from "../../types";
 
 type peopleFetchReturn = {
   data: typeCurriculums[],
@@ -9,7 +9,7 @@ type peopleFetchReturn = {
 };
 
 export async function getCurriculums(): Promise<typeCurriculums[]> {
-  const response = await fetch('https://dummyapi.io/data/api/user/', {
+  const response = await fetch('https://dummyapi.io/data/api/user?limit=40', {
     method: "GET",
     mode: 'cors',
     headers: {

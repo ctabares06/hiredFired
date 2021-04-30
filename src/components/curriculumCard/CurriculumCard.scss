@@ -55,6 +55,11 @@
       border: 2px solid $button-green;
     }
 
+    button.button-red:hover {
+      background-color: $button-red;
+      border: 2px solid $button-red;
+    }
+
   }
 
 }

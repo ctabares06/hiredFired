@@ -13,7 +13,7 @@
       width: 0%;
       background-color: $background-main-color;
       height: .25em;
-      transition: ease-out width .3s;
+      transition: ease-in-out width .2s;
     }
   }
 
@@ -30,7 +30,7 @@
 
   .nav-link-bar {
     width: 100%;
-    transition: ease-out width .3s;
+    transition: ease-in-out width .2s;
   }
 
 }
