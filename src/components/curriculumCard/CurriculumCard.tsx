@@ -4,6 +4,7 @@ import { typeCurriculums, typeCurriculumStatus, typeStats } from '../../types';
 import { setRandomStats } from '../../services/curriculums/setRandomStats';
 import './CurriculumCard.scss';
 import CurriculumStats from '../curriculumStats/CurriculumStats';
+import { GameContext } from '../../context/GameContext';
 
 type typeComponentProps = {
   data : typeCurriculums,
@@ -13,9 +14,19 @@ type typeComponentProps = {
 const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
   
   const {id, email, firstName, lastName, picture, stats } = data;
-  const context = useContext(CurriculumsContext);
-  const { curriculums, hired, fired } = context!.states;
-  const {setCurriculums, setHired, setFired} = context!.functions;
+  const curriculumsContext = useContext(CurriculumsContext);
+  const gameContext = useContext(GameContext);
+
+  const { curriculums, hired, fired } = curriculumsContext!.states;
+  const { setCurriculums, setHired, setFired } = curriculumsContext!.functions;
+  const { maxHired, maxFired } = gameContext!.limits;
+  const { setGameStatus } = gameContext!;
+
+  const checkGameStatus = () => {
+    if (hired.length >= maxHired && fired.length >= maxFired) {
+      setGameStatus(false);
+    }
+  }
 
   const hiredDispatcher = (id: string) => {
     const currentCV = curriculums.filter(person => person.id !== id);
@@ -24,6 +35,7 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
     const newHired = [...hired];
     newHired.push(CVWithStats);
     setHired(newHired);
+    checkGameStatus();
   }
 
   const firedDispatcher = (id: string) => {
@@ -31,6 +43,7 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
     const newFired = [...fired];
     newFired.push(hired[hired.findIndex(person => person.id === id)]);
     setFired(newFired);
+    checkGameStatus();
   }
 
   const checkStats = (stats : typeStats | undefined) => {
