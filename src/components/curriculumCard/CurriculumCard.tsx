@@ -5,6 +5,7 @@ import { setRandomStats } from '../../services/curriculums/setRandomStats';
 import './CurriculumCard.scss';
 import CurriculumStats from '../curriculumStats/CurriculumStats';
 import { GameContext } from '../../context/GameContext';
+import { useHistory } from 'react-router';
 
 type typeComponentProps = {
   data : typeCurriculums,
@@ -16,6 +17,7 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
   const {id, email, firstName, lastName, picture, stats } = data;
   const curriculumsContext = useContext(CurriculumsContext);
   const gameContext = useContext(GameContext);
+  const history = useHistory();
 
   const { curriculums, hired, fired } = curriculumsContext!.states;
   const { setCurriculums, setHired, setFired } = curriculumsContext!.functions;
@@ -25,6 +27,7 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
   const checkGameStatus = () => {
     if (hired.length >= maxHired && fired.length >= maxFired) {
       setGameStatus(false);
+      history.push("/summary");
     }
   }
 
