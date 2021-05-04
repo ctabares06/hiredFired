@@ -19,11 +19,11 @@ const CurrentGame: React.FC = () => {
           </p>
           <p className="game-resume-item">
             <strong>Hired:</strong> 
-            <span>{hired.length}/{maxHired}</span>
+            <span className={ hired.length === maxHired ? "text-green" : ""}>{hired.length}/{maxHired}</span>
           </p>
           <p className="game-resume-item">
             <strong>Fired:</strong> 
-            <span>{fired.length}/{maxFired}</span>
+            <span className={ fired.length === maxFired ? "text-red" : ""}>{fired.length}/{maxFired}</span>
           </p>
         </div>
       </div>
