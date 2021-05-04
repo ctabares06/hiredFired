@@ -4,6 +4,7 @@ import Curriculums from '../components/curriculums/Curriculums';
 import NotFound from '../components/notFound/NotFound';
 import Header from '../components/header/Header';
 import Summary from '../components/summary/Summary';
+import CurrentGame from '../components/currentGame/CurrentGame';
 
 const Router: React.FC = () => {
 
@@ -29,6 +30,7 @@ const Router: React.FC = () => {
               <NotFound />
             </Route>
           </Switch>
+          <CurrentGame />
         </main>
       </div>
     </>
