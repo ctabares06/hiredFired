@@ -38,14 +38,12 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
   const [hired, setHired] = useState<typeCurriculums[]>([]);
   const [fired, setFired] = useState<typeCurriculums[]>([]);
 
-  useEffect(() => checkGameStatus(), [hired, fired]);
-
-  const checkGameStatus = () => {
+  useEffect(() => {
     if (hired.length === maxHired && fired.length === maxFired) {
       setGameStatus(false);
       history.push("/summary");
     }
-  }
+  }, [hired, fired]);
 
   const hiredDispatcher = (id: string) => {
     if (hired.length === maxHired) {

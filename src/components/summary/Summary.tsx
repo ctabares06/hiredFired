@@ -22,6 +22,7 @@ const Summary: React.FC = () => {
 
   return (
     <section>
+      <h2 className="summary-title">Game Over</h2>
       <p>
         {
           salaries.length > 0 ? salaries.reduce((prev, current) => prev + current) : null
