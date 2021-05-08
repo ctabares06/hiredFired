@@ -1,5 +1,6 @@
 import React from 'react';
 import { typeCurriculums } from '../../types';
+import { formatMonetary, formatNumberDecimals } from '../../utils/formatNumbers';
 import './SummaryCard.scss';
 
 type typeComponentProps = {
@@ -14,8 +15,8 @@ const SummaryCard: React.FC<typeComponentProps> = ({ data }) => {
       </div>
       <div className="summary-body">
         <h4 className="summary-name">{data.firstName} {data.lastName}</h4>
-        <small>{data.stats!.salary}</small>
-        <small>{data.stats!.score}</small>
+        <small>{ formatMonetary(data.stats!.salary) }</small>
+        <small>{ formatNumberDecimals(data.stats!.score) }</small>
       </div>
     </article>
   )

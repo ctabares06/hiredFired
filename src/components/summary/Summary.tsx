@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CurriculumsContext } from '../../context/CurriculumsContext';
 import { GameContext } from '../../context/GameContext';
+import { formatMonetary, formatNumberDecimals } from '../../utils/formatNumbers';
 import Modal from '../modal/Modal';
 import SummaryCard from '../summaryCard/SummaryCard';
 import './Summary.scss';
@@ -35,7 +36,7 @@ const Summary: React.FC = () => {
               <h3 className="summary-global-title">Salary</h3>
               <p>
                 {
-                  salaries.length > 0 ? salaries.reduce((prev, current) => prev + current) : null
+                  salaries.length > 0 ? formatMonetary(salaries.reduce((prev, current) => prev + current)) : null
                 }
               </p>
           </div>
@@ -43,7 +44,7 @@ const Summary: React.FC = () => {
               <h3 className="summary-global-title">Score</h3>
               <p>
                 {
-                  scores.length > 0 ? scores.reduce((prev, current) => prev + current) / scores.length : null
+                  scores.length > 0 ? formatNumberDecimals(scores.reduce((prev, current) => prev + current) / scores.length) : null
                 }
               </p>
           </div>
