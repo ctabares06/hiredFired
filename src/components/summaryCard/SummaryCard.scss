@@ -1,0 +1,45 @@
+@import '../../assets/scss/vars';
+
+.summary-card {
+  background-color: $background-alter-color;
+  border-radius: 10px;
+  max-width: 150px;
+  margin: .5em .75em;
+  padding:  .5em .5em .25em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 17px 14px 21px 0px $shadow-main-color;
+  transition: ease-out .1s all;
+  font-size: .9em;
+
+  .summary-picture-container {
+    text-align: center;
+    width: 75px;
+    height: auto;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: ease-in-out .5s all;
+    }
+  }
+
+  .summary-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .summary-name {
+      max-width: 85%;
+      margin: 0 auto;
+      margin-bottom: .5em;
+      text-align: center;
+    }
+  }
+
+}

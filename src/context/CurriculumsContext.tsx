@@ -41,7 +41,6 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
   useEffect(() => {
     if (hired.length === maxHired && fired.length === maxFired) {
       setGameStatus(false);
-      history.push("/summary");
     }
   }, [hired, fired]);
 

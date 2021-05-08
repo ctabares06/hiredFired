@@ -1,3 +1,61 @@
-.summary-title {
-  border-bottom: $card-main-color solid 1px;
+@import '../../assets/scss/vars';
+
+.summary {
+  padding: 1em;
+
+  .summary-title {
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: $card-main-color solid 1px;
+  }
+
+  .summary-resume {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1em 0;
+
+    .summary-card {
+      border-radius: 10px;
+      margin: 0 1em;
+      background-color: $background-alter-color;
+    }
+
+  }
+
+  .summary-globals {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .summary-global-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+
+    .summary-global-title {
+      margin: 0 auto;
+    }
+
+  }
+
+  .summary-restart-container {
+    margin-top: 2em;
+    text-align: center;
+
+    .summary-button-restart {
+      font-size: 1em;
+      cursor: pointer;
+      padding: .5em 2em;
+      border: none;
+      border-radius: 10px;
+      background-color: $card-main-color;
+      color: #fff;
+    }
+
+  }
+  
 }

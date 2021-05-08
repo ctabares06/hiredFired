@@ -3,8 +3,12 @@ import './Modal.scss';
 
 const Modal: React.FC<React.ReactNode> = ({ children }) => {
   useEffect(() => {
-    console.log("Entró");
     document.getElementById('page-background')?.classList.add('active');
+    document.body.style.overflowY = "hidden";
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    }
   }, []);
 
   return (

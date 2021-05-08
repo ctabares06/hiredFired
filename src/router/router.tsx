@@ -24,15 +24,11 @@ const Router: React.FC = () => {
             <Route path="/fired">
               <Curriculums type="fired" />
             </Route>
-            <Route path="/summary">
-              <Modal>
-                <Summary />
-              </Modal>
-            </Route>
             <Route path="*">
               <NotFound />
             </Route>
           </Switch>
+          <Summary />
           <CurrentGame />
         </main>
       </div>
