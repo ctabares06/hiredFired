@@ -5,7 +5,6 @@ import NotFound from '../components/notFound/NotFound';
 import Header from '../components/header/Header';
 import Summary from '../components/summary/Summary';
 import CurrentGame from '../components/currentGame/CurrentGame';
-import Modal from '../components/modal/Modal';
 
 const Router: React.FC = () => {
 

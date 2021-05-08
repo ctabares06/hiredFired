@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 type gameContextType = {
+  editedGame : boolean,
+  setEditedGame: (attr: boolean) => void,
   gameStatus: boolean,
   setGameStatus: (attr: boolean) => void,
   limits: {
@@ -20,20 +22,23 @@ const GameContextProvider: React.FC<React.ReactNode> = ({ children }) => {
   }
   
   const [gameStatus, setGameStatus] = useState<boolean>(true);
+  const [editedGame, setEditedGame] = useState<boolean>(false);
 
   useEffect(() => {
-    if (gameStatus) {
-      window.addEventListener('beforeunload', onWindowReload);
+    if (editedGame) {
+      window.onbeforeunload = onWindowReload;
     } else {
-      window.removeEventListener('beforeunload', onWindowReload);
+      window.onbeforeunload = null;
     }
-  }, [gameStatus])
+  }, [editedGame])
 
   const [maxHired] = useState<number>(10);
   const [maxFired] = useState<number>(5);
   const [minCurriculums] = useState<number>(0);
 
   const contextValue = {
+    editedGame,
+    setEditedGame,
     gameStatus,
     setGameStatus,
     limits: {

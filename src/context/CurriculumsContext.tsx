@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useHistory } from 'react-router';
 import { getCurriculums } from '../services/curriculums/getCurriculums';
 import { setRandomStats } from '../services/curriculums/setRandomStats';
 import { typeCurriculums } from '../types';
@@ -23,11 +22,10 @@ export const CurriculumsContext = React.createContext<typeCurriculumsContext | n
 const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
 
   const gameContext = useContext(GameContext);
-  const history = useHistory();
 
   const [curriculums, setCurriculums] = useState<typeCurriculums[]>([]);
+  const { setGameStatus, editedGame, setEditedGame } = gameContext!;
   const { maxHired, maxFired } = gameContext!.limits;
-  const setGameStatus = gameContext!.setGameStatus;
 
   useEffect(() => {
     getCurriculums().then(response => {
@@ -41,6 +39,7 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
   useEffect(() => {
     if (hired.length === maxHired && fired.length === maxFired) {
       setGameStatus(false);
+      setEditedGame(false);
     }
   }, [hired, fired]);
 
@@ -54,6 +53,9 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
     const newHired = [...hired];
     newHired.push(CVWithStats);
     setHired(newHired);
+    if (!editedGame) {
+      setEditedGame(true);
+    }
   }
 
   const firedDispatcher = (id: string) => {
