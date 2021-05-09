@@ -37,3 +37,7 @@ h1 {
 .text-green {
   color: $button-green;
 }
+
+*:disabled {
+  pointer-events: none;
+}

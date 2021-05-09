@@ -42,22 +42,25 @@
       background-color: $card-main-color;
       cursor: pointer;
       color: #fff;
-      border: 2px solid $card-main-color;
+      border: none;
       border-radius: 10px;
       font-size: 1em;
       padding: .5em;
       width: 100%;
       transition: ease-in-out .3s all;
+
+      &:disabled {
+        background-color: $disabled-primary-color;
+      }
     }
+
 
     button.button-green:hover {
       background-color: $button-green;
-      border: 2px solid $button-green;
     }
 
     button.button-red:hover {
       background-color: $button-red;
-      border: 2px solid $button-red;
     }
 
   }

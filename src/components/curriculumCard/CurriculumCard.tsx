@@ -6,10 +6,11 @@ import CurriculumStats from '../curriculumStats/CurriculumStats';
 
 type typeComponentProps = {
   data : typeCurriculums,
-  status : typeCurriculumStatus
+  status : typeCurriculumStatus,
+  isDisabled : boolean,
 }
 
-const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
+const CurriculumCard: React.FC<typeComponentProps> = ({ data, status, isDisabled }) => {
   
   const {id, email, firstName, lastName, picture, stats } = data;
   const { setHired, setFired } = useContext(CurriculumsContext)!.functions;
@@ -27,9 +28,9 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status }) => {
   const buttonType = (status: typeCurriculumStatus) => {
     switch (status) {
       case "curriculums":
-        return <button data-id={id} onClick={() => setHired(id)}  className="card-button button-green">Hire</button>
+        return <button data-id={id} onClick={() => setHired(id)}  className="card-button button-green" disabled={isDisabled}>Hire</button>
       case "hired":
-        return <button data-id={id} onClick={() => setFired(id)}  className="card-button button-red">Fire</button>
+        return <button data-id={id} onClick={() => setFired(id)}  className="card-button button-red" disabled={isDisabled}>Fire</button>
       default:
         return null;
     }
