@@ -3,8 +3,8 @@ import Navbar from "../navbar/Navbar";
 import './Header.scss';
 
 const Header: React.FC = () => (
-  <header className="main-header">
-    <h1 className="header-title">
+  <header className="header">
+    <h1 className="header__title">
       Hired <span>Fired</span>
     </h1>
     <Navbar />

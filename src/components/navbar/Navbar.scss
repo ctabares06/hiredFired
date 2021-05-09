@@ -1,36 +1,36 @@
 @import '../../assets/scss/vars';
 
-.nav-container {
+.nav {
   margin: .5em 0px;
   display: flex;
 
-  .nav-link {
+  &__link {
     text-decoration: none;
     margin: 0px 1.5em;
     color: $secondary-white;
 
-    .nav-link-bar {
+    &__bar {
       width: 0%;
       background-color: $secondary-white;
       height: .25em;
       transition: ease-in-out width .2s;
     }
-  }
 
-  .nav-link.active {
-    
-    .nav-link-bar {
-      width: 100%;
+    &--active {
+      .nav__link__bar {
+        width: 100%;
+      }
+
     }
-  }
 
+    &:hover {
+      .nav__link__bar {
+        width: 100%;
+        transition: ease-in-out width .2s;
+      }
+
+    }
+    
+  }
 }
 
-.nav-link:hover {
-
-  .nav-link-bar {
-    width: 100%;
-    transition: ease-in-out width .2s;
-  }
-
-}
