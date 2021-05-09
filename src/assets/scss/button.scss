@@ -1,6 +1,10 @@
 .btn {
   transition: ease-in-out .3s all;
-  
+  border: none;
+  padding: .25em;
+  font-size: 1em;
+  cursor: pointer;
+
   &:focus {
     outline: none;
   }
@@ -15,6 +19,7 @@
 
   &--orange {
     background-color: $primary-orange;
+    color: $primary-white;
 
     &:disabled {
       background-color: $primary-dark-gray;
