@@ -1,0 +1,25 @@
+@import '../../assets/scss/vars'; 
+
+.endGame {
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  margin: .5em;
+  font-size: 2em;
+
+  .endGame-button:disabled {
+    background-color: $disabled-primary-color;
+  }
+
+  .endGame-button {
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: $card-main-color;
+    color: $titles-main-color;
+    padding: .5em 0;
+    transition: ease-in-out all .3s;
+    cursor: pointer;
+  }
+
+}
