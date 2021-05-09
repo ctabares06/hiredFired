@@ -3,13 +3,13 @@
 .summary {
   padding: 1em;
 
-  .summary-title {
+  &__title {
     text-transform: uppercase;
     text-align: center;
     border-bottom: $primary-orange solid 1px;
   }
 
-  .summary-resume {
+  &__resume {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -17,38 +17,33 @@
 
   }
 
-  .summary-globals {
+  &__global {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    .summary-global-item {
+    &__item {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 50%;
+
+      &__title {
+        margin: 0 auto;
+      }
     }
 
-    .summary-global-title {
-      margin: 0 auto;
-    }
 
   }
 
-  .summary-restart-container {
+  &__restart {
     margin-top: 2em;
     text-align: center;
+    font-size: 1.2em;
 
-    .summary-button-restart {
-      text-decoration: none;
-      font-size: 1em;
-      cursor: pointer;
+    & &__button {
       padding: .5em 2em;
-      border: none;
-      border-radius: 10px;
-      background-color: $primary-orange;
-      color: #fff;
     }
 
   }

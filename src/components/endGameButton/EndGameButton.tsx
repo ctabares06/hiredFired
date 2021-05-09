@@ -16,8 +16,8 @@ const EndGameButton: React.FC = () => {
   }
 
   return (
-    <div className="endGame fixed-element">
-    <button onClick={endGame} className="endGame-button" disabled={!(hired.length===maxHired)}>
+    <div className="end-game">
+    <button onClick={endGame} className="btn btn--rounded btn--wide btn--orange" disabled={!(hired.length===maxHired)}>
       <h2>End Game</h2>
       </button>
     </div>

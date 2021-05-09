@@ -1,25 +1,11 @@
 @import '../../assets/scss/vars'; 
 
-.endGame {
+.end-game {
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 300px;
   margin: .5em;
-  font-size: 2em;
-
-  .endGame-button:disabled {
-    background-color: $primary-dark-gray;
-  }
-
-  .endGame-button {
-    border: none;
-    width: 100%;
-    border-radius: 10px;
-    background-color: $primary-orange;
-    color: $primary-light-gray;
-    padding: .5em 0;
-    transition: ease-in-out all .3s;
-    cursor: pointer;
-  }
+  font-size: 1.25em;
 
 }
