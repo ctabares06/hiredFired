@@ -45,7 +45,7 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
 
   const hiredDispatcher = (id: string) => {
     if (hired.length === maxHired) {
-      return alert("cannot push more");
+      return;
     }
     const currentCV = curriculums.filter(person => person.id !== id);
     setCurriculums(currentCV);
@@ -60,7 +60,7 @@ const CurriculumsContextProvier: React.FC<React.ReactNode> = ({ children }) => {
 
   const firedDispatcher = (id: string) => {
     if (fired.length === maxFired) {
-      return alert("cannot push more");
+      return;
     }
     setHired(hired.filter(person => person.id !== id));
     const newFired = [...fired];

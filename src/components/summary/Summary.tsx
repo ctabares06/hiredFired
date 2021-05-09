@@ -50,7 +50,7 @@ const Summary: React.FC = () => {
           </div>
         </div>
         <div className="summary-restart-container">
-          <button className="summary-button-restart">Restart Game</button>
+          <a href="/" className="summary-button-restart">Restart Game</a>
         </div>
       </section>
     </Modal>
