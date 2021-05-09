@@ -2,7 +2,7 @@ import React from 'react';
 import './CurriculumsContainer.scss';
 
 const CurriculumsContainer : React.FC<React.ReactNode> = ({ children }) => (
-  <div className="curriculums-items-container">
+  <div className="grid-cvs">
     {children}
   </div>
 );

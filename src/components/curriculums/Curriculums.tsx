@@ -45,8 +45,8 @@ const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
   }
 
   return (
-    <section className="curriculums-page">
-      <h1 className="curriculums-title">{type} people</h1>
+    <section className="page">
+      <h1 className="page__title">{type} people</h1>
       <CurriculumsContainer>
         {
           selectedArray.map(curriculum => {

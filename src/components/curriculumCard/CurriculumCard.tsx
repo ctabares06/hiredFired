@@ -37,16 +37,16 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status, isDisabled
   }
 
   return (
-    <article className="curriculum-card">
-      <div className="curriculum-picture-container">
-        <img src={picture} alt={id} className="curriculum-picture" />
+    <article className="card-cv">
+      <div className="card-cv__picture">
+        <img src={picture} alt={id} className="card-cv__picture__pic" />
       </div>
-      <div className="curriculum-body">
-        <h3 className="curriculum-name">{firstName} {lastName}</h3>
+      <div className="card-cv__body">
+        <h3 className="card-cv__body__name">{firstName} {lastName}</h3>
         <small>{email}</small>
       </div>
       { checkStats(stats) }
-      <div className="curriculum-buttons">
+      <div className="card-cv__button">
         { buttonType(status) }
       </div>
     </article>

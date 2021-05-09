@@ -1,4 +1,4 @@
-.notFound-container {
+.not-found {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -8,9 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.notFound-text {
-  font-size: 5em;
-  color: #000;
+  &__text {
+    font-size: 5em;
+    color: #000;
+  }
+
 }

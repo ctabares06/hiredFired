@@ -1,6 +1,6 @@
 @import '../../assets/scss/vars';
 
-.curriculum-card {
+.card-cv {
   background-color: $primary-white;
   border-radius: 10px;
   box-sizing: border-box;
@@ -12,13 +12,13 @@
   box-shadow: 17px 14px 21px 0px $primary-mid-gray;
   transition: ease-out .1s all;
 
-  .curriculum-picture-container {
+  &__picture {
     text-align: center;
     width: 150px;
     height: auto;
     margin: 0 auto;
 
-    img {
+    &__pic {
       display: block;
       width: 100%;
       height: 100%;
@@ -27,14 +27,14 @@
     }
   }
 
-  .curriculum-body {
+  &__body {
     transition: inherit;
-    h3 {
+    &__name {
       text-align: center;
     }
   }
 
-  .curriculum-buttons {
+  &__button {
     width: 100%;
     margin-top: 1em;
   }
