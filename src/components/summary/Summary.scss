@@ -6,7 +6,7 @@
   .summary-title {
     text-transform: uppercase;
     text-align: center;
-    border-bottom: $card-main-color solid 1px;
+    border-bottom: $primary-orange solid 1px;
   }
 
   .summary-resume {
@@ -47,7 +47,7 @@
       padding: .5em 2em;
       border: none;
       border-radius: 10px;
-      background-color: $card-main-color;
+      background-color: $primary-orange;
       color: #fff;
     }
 

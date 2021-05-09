@@ -8,15 +8,15 @@
   font-size: 2em;
 
   .endGame-button:disabled {
-    background-color: $disabled-primary-color;
+    background-color: $primary-dark-gray;
   }
 
   .endGame-button {
     border: none;
     width: 100%;
     border-radius: 10px;
-    background-color: $card-main-color;
-    color: $titles-main-color;
+    background-color: $primary-orange;
+    color: $primary-light-gray;
     padding: .5em 0;
     transition: ease-in-out all .3s;
     cursor: pointer;

@@ -7,11 +7,11 @@
   .nav-link {
     text-decoration: none;
     margin: 0px 1.5em;
-    color: $background-main-color;
+    color: $secondary-white;
 
     .nav-link-bar {
       width: 0%;
-      background-color: $background-main-color;
+      background-color: $secondary-white;
       height: .25em;
       transition: ease-in-out width .2s;
     }

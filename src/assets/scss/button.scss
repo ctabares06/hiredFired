@@ -1,0 +1,33 @@
+.btn {
+  transition: ease-in-out .3s all;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &--rounded {
+    border-radius: 10px;
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--orange {
+    background-color: $primary-orange;
+
+    &:disabled {
+      background-color: $primary-dark-gray;
+    }
+
+    &--hover-green:hover {
+      background-color: $primary-green;
+    }
+
+    &--hover-red:hover {
+      background-color: $primary-red;
+    }
+
+  }
+
+}

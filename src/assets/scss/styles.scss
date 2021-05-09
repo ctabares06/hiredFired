@@ -1,43 +1,5 @@
-@use 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap';
 @import './vars';
 
-* {
-  box-sizing: border-box;
-}
+@use './main.scss';
+@use './button.scss';
 
-html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-}
-
-body {
-  width: 100%;
-  max-width: 1920px;
-  margin: auto;
-  background-color: $background-main-color;
-}
-
-h1, h2, h3, h4, h5, p, label {
-  margin: 0;
-  font-weight: 300;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-.fixed-element {
-  position: fixed;
-}
-
-.text-red {
-  color: $button-red;
-}
-
-.text-green {
-  color: $button-green;
-}
-
-*:disabled {
-  pointer-events: none;
-}

@@ -28,9 +28,9 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status, isDisabled
   const buttonType = (status: typeCurriculumStatus) => {
     switch (status) {
       case "curriculums":
-        return <button data-id={id} onClick={() => setHired(id)}  className="card-button button-green" disabled={isDisabled}>Hire</button>
+        return <button data-id={id} onClick={() => setHired(id)}  className="btn btn--rounded btn--wide btn--orange btn--hover-green" disabled={isDisabled}>Hire</button>
       case "hired":
-        return <button data-id={id} onClick={() => setFired(id)}  className="card-button button-red" disabled={isDisabled}>Fire</button>
+        return <button data-id={id} onClick={() => setFired(id)}  className="btn btn--rounded btn--wide btn--orange btn--hover-red" disabled={isDisabled}>Fire</button>
       default:
         return null;
     }
