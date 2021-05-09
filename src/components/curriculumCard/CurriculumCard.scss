@@ -1,16 +1,11 @@
 @import '../../assets/scss/vars';
 
 .card-cv {
-  background-color: $primary-white;
-  border-radius: 10px;
   box-sizing: border-box;
   margin: 1em 1.5em;
-  padding:  1em 1em .5em 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 17px 14px 21px 0px $primary-mid-gray;
-  transition: ease-out .1s all;
 
   &__picture {
     text-align: center;

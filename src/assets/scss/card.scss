@@ -1,0 +1,16 @@
+.card {
+  padding:  1em 1em .5em 1em;
+
+  &--rounded {
+    border-radius: 10px;
+  }
+
+  &--shadow {
+    box-shadow: 17px 14px 21px 0px $primary-mid-gray;
+  }
+
+  &--white {
+    background-color: $primary-white;
+  }
+
+}

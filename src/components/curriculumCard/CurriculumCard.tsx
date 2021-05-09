@@ -37,7 +37,7 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status, isDisabled
   }
 
   return (
-    <article className="card-cv">
+    <article className="card-cv card card--rounded card--white card--shadow">
       <div className="card-cv__picture">
         <img src={picture} alt={id} className="card-cv__picture__pic" />
       </div>
