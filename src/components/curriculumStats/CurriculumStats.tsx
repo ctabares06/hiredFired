@@ -1,16 +1,53 @@
 import React from 'react';
 import { typeStats } from '../../types';
 import { formatMonetary, formatNumberDecimals } from '../../utils/formatNumbers';
+import './CurriculumStats.scss';
 
 const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => {
 
   return (
-    <div className="curriculums-expand">
-        <p><b>Score: </b> { formatNumberDecimals(score) }</p>
-        <p><b>Salary: </b> {formatMonetary(salary)}</p>
-        <p><b>pros: </b> {pros.join(', ')}</p>
-        <p><b>cons: </b> {cons.join(', ')}</p>
-    </div>
+    <ul className="stats">
+      <li className="stats__item">
+        <i className="stats__item__icon"></i>
+        <b>Score </b> { formatNumberDecimals(score) }
+      </li>
+      <li>
+        <i className="stats__item__icon"></i>
+        <b>Salary </b> {formatMonetary(salary)}
+      </li>
+      <li>
+        <i className="stats__item__icon"></i>
+        <b>pros </b> 
+        <ul className="stats__nested">
+          {
+            pros.map(value => {
+              return (
+                <li>
+                  <i className="stats__item__icon"></i>
+                  <b>{value}</b>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </li>
+      <li>
+        <i className="stats__item__icon"></i>
+        <b>cons </b> 
+        <ul className="stats__nested">
+          {
+            cons.map(value => {
+              return (
+                <li>
+                  <i className="stats__item__icon"></i>
+                  <b>{value}</b>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </li>
+    </ul>
   )
 }
 

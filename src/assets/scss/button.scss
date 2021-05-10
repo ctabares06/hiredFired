@@ -20,18 +20,29 @@
 
   &--orange {
     background-color: $primary-orange;
+    border: 2px solid $primary-orange;
     color: $primary-white;
 
     &:disabled {
+      pointer-events: none;
+      border-color: $primary-dark-gray;
       background-color: $primary-dark-gray;
     }
 
     &--hover-green:hover {
+      border-color: $primary-green;
       background-color: $primary-green;
     }
 
     &--hover-red:hover {
+      border-color: $primary-red;
       background-color: $primary-red;
+    }
+
+    &--hover-white:hover {
+      border-color: $primary-orange;
+      background-color: $primary-white;
+      color: $primary-orange;
     }
 
   }

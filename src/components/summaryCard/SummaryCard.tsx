@@ -15,8 +15,8 @@ const SummaryCard: React.FC<typeComponentProps> = ({ data }) => {
       </div>
       <div className="sum-card__body">
         <h4 className="sum-card__body__name">{data.firstName} {data.lastName}</h4>
-        <small>{ formatMonetary(data.stats!.salary) }</small>
-        <small>{ formatNumberDecimals(data.stats!.score) }</small>
+        <span className="sum-card__body__item">{ formatMonetary(data.stats!.salary) }</span>
+        <span className="sum-card__body__item">{ formatNumberDecimals(data.stats!.score) }</span>
       </div>
     </article>
   )

@@ -23,14 +23,14 @@ const Summary: React.FC = () => {
     <Modal>
       <section className="summary">
         <h1 className="summary__title">Game Over</h1>
-        <h2>Your team:</h2>
+        <h2 className="summary__subject">Your team</h2>
         <div className="summary__resume">
           {
             hired.map(cv => <SummaryCard data={cv} key={cv.id} />)
           }
           
         </div>
-        <h2>Globals:</h2>
+        <h2 className="summary__subject">Globals</h2>
         <div className="summary__global">
           <div className="summary__global__item">
               <h3 className="summary__global__item__title">Salary</h3>
@@ -50,7 +50,7 @@ const Summary: React.FC = () => {
           </div>
         </div>
         <div className="summary__restart">
-          <a href="/" className="btn btn--orange btn--rounded summary__restart__button">Restart Game</a>
+          <a href="/" className="btn btn--orange btn--rounded btn--orange--hover-white summary__restart__button">Restart Game</a>
         </div>
       </section>
     </Modal>

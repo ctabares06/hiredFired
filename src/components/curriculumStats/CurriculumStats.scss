@@ -1,0 +1,26 @@
+@import '../../assets/scss/vars';
+
+.stats {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: .9em;
+
+  &__nested {
+    list-style: none;
+    margin-left: 1em;
+  }
+
+  &__item {
+    
+    &__icon {
+      display: inline-block;
+      background-color: $primary-orange;
+      clip-path: polygon(100% 49%, 0% 100%, 25% 51%, 0% 0%);
+      margin-right: .75em;
+      width: .75em;
+      height: .75em;
+    }
+
+  }
+}

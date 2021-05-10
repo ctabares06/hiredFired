@@ -45,7 +45,9 @@ const CurriculumCard: React.FC<typeComponentProps> = ({ data, status, isDisabled
         <h3 className="card-cv__body__name">{firstName} {lastName}</h3>
         <small>{email}</small>
       </div>
-      { checkStats(stats) }
+      <div className="card-cv__stats">
+        { checkStats(stats) }
+      </div>
       <div className="card-cv__button">
         { buttonType(status) }
       </div>

@@ -1,7 +1,11 @@
 .page {
+
+  font-size: 1.7rem;
+
   &__title {
     text-align: center;
-    padding: 1.5em 0px 1em 0px;
+    padding: 1em 0px 1em 0px;
     text-transform: uppercase;
+    font-weight: 300;
   }
 }
