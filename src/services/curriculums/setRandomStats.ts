@@ -5,14 +5,15 @@ const pros = [
   'respectful',
   'funny',
   'eloquent',
-  'gift you beers',
+  'invite beers',
 ];
 
 const cons = [
-   'a',
-   'b',
-   'c',
-   'd'
+   'lol player',
+   'disrespectful',
+   'voyeur',
+   'hater',
+   'flat earth'
 ];
 
 const randomIntegerNumberRange = (max: number) : number => {
