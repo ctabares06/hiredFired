@@ -1,5 +1,20 @@
+@import '../../assets/scss/vars';
+
 .grid-cvs {
   display: grid;
-  row-gap: 1.5em;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(auto-fit, 25%);
+}
+
+@media screen and (max-width: 900px) {
+  .grid-cvs {
+    grid-template-columns: repeat(auto-fit, 33.3%);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .grid-cvs {
+    margin: 0 auto;
+    max-width: 240px;
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
 }

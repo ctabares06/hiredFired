@@ -20,9 +20,9 @@ const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => 
         <b>pros </b> 
         <ul className="stats__nested">
           {
-            pros.map(value => {
+            pros.map((value, index) => {
               return (
-                <li>
+                <li key={index}>
                   <i className="stats__item__icon"></i>
                   <b>{value}</b>
                 </li>
@@ -36,9 +36,9 @@ const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => 
         <b>cons </b> 
         <ul className="stats__nested">
           {
-            cons.map(value => {
+            cons.map((value, index) => {
               return (
-                <li>
+                <li key={index}>
                   <i className="stats__item__icon"></i>
                   <b>{value}</b>
                 </li>
