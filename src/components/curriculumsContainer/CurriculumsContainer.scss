@@ -5,13 +5,13 @@
   grid-template-columns: repeat(auto-fit, 25%);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: $max-width-mid) {
   .grid-cvs {
     grid-template-columns: repeat(auto-fit, 33.3%);
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: $max-width-short) {
   .grid-cvs {
     margin: 0 auto;
     max-width: 240px;
