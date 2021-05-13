@@ -1,18 +1,27 @@
 @import '../../assets/scss/vars';
 
 .nav {
-  margin: .5em 0px;
+  background-color: $bg__primary--white;
+  top: 0;
+  position: sticky;
+  width: 100%;
+  padding-top: 1em;
+  margin-bottom: 50px;
   display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(#000000, .25);
 
   &__link {
     text-decoration: none;
-    margin: 0px 1.5em;
-    color: $secondary-white;
+    text-transform: uppercase;
+    margin: 0px 1.5em 1em 1.5em;
+    color: $text__primary--black;
 
     &__bar {
       width: 0%;
-      background-color: $secondary-white;
-      height: .25em;
+      margin-top: -4px;
+      background-color: $text__primary--black;
+      height: .35em;
       transition: ease-in-out width .2s;
     }
 

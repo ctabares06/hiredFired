@@ -3,12 +3,14 @@ import Navbar from "../navbar/Navbar";
 import './Header.scss';
 
 const Header: React.FC = () => (
+  <>
   <header className="header">
     <h1 className="header__title">
-      Hired <span>Fired</span>
+      Hired <span className="header__title--fixed">Fired</span>
     </h1>
-    <Navbar />
   </header>
+  <Navbar />
+  </>
 )
 
 export default Header;

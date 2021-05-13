@@ -1,4 +1,4 @@
-@use 'https://fonts.googleapis.com/css2?family=family=Noto+Sans+JP:wght@100;300;400;500&display=swap';
+@use 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap';
 
 * {
   box-sizing: border-box;
@@ -7,12 +7,12 @@
 }
 
 html {
-  font: 300 normal 100%/1.6 'Noto Sans JP', sans-serif;
+  font: 400 normal 100%/1.6 'Noto Sans JP', sans-serif;
 }
 
 body {
   width: 100%;
   max-width: 1920px;
   margin: auto;
-  background-color: $primary-white;
+  background-color: $bg__secondary--white;
 }

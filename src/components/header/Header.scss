@@ -1,17 +1,18 @@
 @import '../../assets/scss/vars';
 
 .header {
-  background-color: $primary-orange;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: $text__primary--black;
+  background-color: $bg__primary--white;
+  text-align: center;
   min-height: 1em;
 
   &__title {
-    color: $primary-light-gray;
-    font-size: 1.625em;
-    padding: 1rem 0em;
+    letter-spacing: -2px;
+    font-size: 3em;
     
+    &--fixed {
+      margin-left: -22px;
+    }
+
   }
 }

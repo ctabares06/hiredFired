@@ -1,11 +1,12 @@
-$secondary-white : #f0f0f0;
-$primary-white : #f3f3f3;
-$primary-light-gray : #eee;
-$primary-mid-gray : #cacaca;
-$primary-dark-gray: #969696;
-$primary-orange : #e4871e;
-$primary-green : #1eb400;
-$primary-red : #ee0000;
+// background colors
 
-$max-width-mid : 900px;
-$max-width-short : 600px;
+$bg__primary--white : #fff;
+$bg__secondary--white : #f8f8f8;
+$bg__primary--green : #66c03b;
+$bg__primary--red : #ff5757;
+
+// text colors
+
+$text__primary--black : #000;
+$text__secondary--black : #616161;
+$text__primary--white : #fff;
