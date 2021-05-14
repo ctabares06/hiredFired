@@ -1,0 +1,80 @@
+@import "../../assets/scss/vars";
+
+.card-cv {
+  font-size: 1rem;
+  background-color: $bg__primary--white;
+  box-shadow: 6px 6px 3px 0px rgba(#000000, 0.25);
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__picture {
+    display: flex;
+    flex-direction: row;
+
+    &__img {
+      width: 50%;
+      height: auto;
+      display: block;
+    }
+
+    &__holder {
+      width: 50%;
+      height: auto;
+      background-color: $bg__alter--white;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    &__name {
+      font-weight: 400;
+      font-size: 1.1em;
+    }
+
+    &__email {
+      margin: 0 0 .5em 0;
+      color: $text__secondary--black;
+      font-size: 0.9em;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    &__button {
+      transition: ease-in-out all .1s;
+      margin-top: auto;
+      align-self: flex-end;
+      cursor: pointer;
+      font-size: 0.9em;
+      border: none;
+      padding: 0.25em 1em;
+      box-shadow: 4px 4px 4px 0px rgba(#000000, 0.25);
+  
+      &--green {
+        background-color: $bg__primary--green;
+        color: $text__primary--white;
+        
+        &:hover {
+          background-color: $bg__secondary--green;
+        }
+      }
+
+      &--red {
+        background-color: $bg__primary--red;
+        color: $text__primary--white;
+
+        &:hover {
+          background-color: $bg__secondary--red;
+        }
+      }
+
+    }
+  }
+
+}

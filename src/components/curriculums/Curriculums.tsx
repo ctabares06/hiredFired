@@ -3,7 +3,6 @@ import { CurriculumsContext } from '../../context/CurriculumsContext';
 import { GameContext } from "../../context/GameContext";
 import { typeCurriculumStatus } from "../../types";
 import CurriculumCard from "../curriculumCard/CurriculumCard";
-import CurriculumsContainer from "../curriculumsContainer/CurriculumsContainer";
 import './Curriculums.scss';
 
 const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
@@ -46,8 +45,7 @@ const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
 
   return (
     <section className="page">
-      <h1 className="page__title">{type} people</h1>
-      <CurriculumsContainer>
+      <div className="page__items">
         {
           selectedArray.map(curriculum => {
             return (
@@ -60,7 +58,7 @@ const Curriculums: React.FC<{ type: typeCurriculumStatus }> = ({ type }) => {
             )
           })
         }
-      </CurriculumsContainer>
+      </div>
     </section>
   )
 }
