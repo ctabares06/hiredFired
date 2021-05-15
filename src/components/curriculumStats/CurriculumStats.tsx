@@ -10,7 +10,7 @@ const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => 
       const allBlocks = document.getElementsByClassName("slide-block");
       Array.from(allBlocks).forEach(element => {
         element.classList.add('h-100');
-        element.querySelector('.slide-block__link')!.innerHTML = "ver menos";
+        element.querySelector('.slide-block__link')!.innerHTML = "show less";
       });
     }, 150);
   }, [])
@@ -19,12 +19,12 @@ const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => 
     const block = event.currentTarget.closest(".slide-block");
     if (block?.classList.contains('h-100')) {
       block?.classList.remove('h-100');
-      event.currentTarget.innerText = "ver más";
+      event.currentTarget.innerText = "show more";
       return;
     } 
 
     block?.classList.add('h-100');
-    event.currentTarget.innerText = "ver menos";
+    event.currentTarget.innerText = "show less";
   }
 
   return (
