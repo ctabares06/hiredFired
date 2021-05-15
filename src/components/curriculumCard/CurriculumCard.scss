@@ -56,6 +56,12 @@
       padding: 0.25em 1em;
       box-shadow: 4px 4px 4px 0px rgba(#000000, 0.25);
   
+      &:disabled {
+        background-color: $text__secondary--black;
+        color: $text__primary--white;
+        pointer-events: none;
+      }
+
       &--green {
         background-color: $bg__primary--green;
         color: $text__primary--white;
