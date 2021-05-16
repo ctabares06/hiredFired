@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+@import '../../assets/scss/vars';
+
+.not-found {
+  position: fixed;
+  color: $text__alter--black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg__secondary--white;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__back {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 5;
+    top: 3em;
+    left: 2em;
+    cursor: pointer;
+    
+    &:hover {
+      .not-found__back__text {
+        border-bottom: 1px solid $text__alter--black;
+      }
+    }
+
+    &__icon {
+      width: 45px;
+    }
+
+    &__text {
+      padding-bottom: 1px;
+    }
+
+  }
+  
+  &__title {
+   font-family: 'Fira Sans', sans-serif;
+   font-size: 12em;
+   line-height: 1;
+ }
+
+}
+
+.arrow {
+  width: 14px;
+  height: 4px;
+  background-color: $text__primary--black;
+
+  &__bottom {
+    transform: rotateZ(45deg) translateY(4px) translateX(3px);
+  }
+
+  &__top {
+    transform: rotateZ(-45deg) translateX(-1px);
+  }
+
+  &__stick {
+    width: 20px;
+    transform: translateX(11px) translateY(-3px);
+  }
+
+}
