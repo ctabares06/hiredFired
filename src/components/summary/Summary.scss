@@ -1,0 +1,68 @@
+@import '../../assets/scss/vars';
+
+.summary {
+  max-width: 800px;
+  background-color: $bg__primary--white;
+  padding: 1em;
+
+  &__title {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__resume {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 6em;
+    justify-content: center;
+
+    &__image {
+      width: 100px;
+      height: auto;
+      display: block;
+    }
+
+  }
+
+  &__subject {
+    font-weight: 400;
+    font-size: 1.5em;
+    padding: .5em 0;
+  }
+
+  &__global {
+    display: flex;
+    direction: row;
+
+    &__item {
+      flex-basis: 50%;
+      text-align: center;
+
+      &__title {
+        font-weight: 400;
+      }
+
+    }
+  }
+
+  &__restart {
+    display: block;
+    width: max-content;
+    margin: auto;
+    margin-top: 1em;
+    text-decoration: none;
+    background-color: $text__alter--black;
+    color: $text__primary--white;
+    padding: .5em .75em;
+    box-shadow: 4px 4px 2px 0px rgba(#000000, .50);
+    transition: ease-in-out all .3s;
+
+    &:hover {
+      background-color: $text__secondary--black;
+    }
+  }
+
+}

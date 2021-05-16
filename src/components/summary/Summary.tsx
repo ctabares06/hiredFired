@@ -3,7 +3,6 @@ import { CurriculumsContext } from '../../context/CurriculumsContext';
 import { GameContext } from '../../context/GameContext';
 import { formatMonetary, formatNumberDecimals } from '../../utils/formatNumbers';
 import Modal from '../modal/Modal';
-import SummaryCard from '../summaryCard/SummaryCard';
 import './Summary.scss';
 
 const Summary: React.FC = () => {
@@ -26,9 +25,8 @@ const Summary: React.FC = () => {
         <h2 className="summary__subject">Your team</h2>
         <div className="summary__resume">
           {
-            hired.map(cv => <SummaryCard data={cv} key={cv.id} />)
+            hired.map(cv => <img className="summary__resume__image" src={cv.picture} alt={cv.id} />)
           }
-          
         </div>
         <h2 className="summary__subject">Globals</h2>
         <div className="summary__global">
@@ -49,9 +47,7 @@ const Summary: React.FC = () => {
               </p>
           </div>
         </div>
-        <div className="summary__restart">
-          <a href="/" className="btn btn--orange btn--rounded btn--orange--hover-white summary__restart__button">Restart Game</a>
-        </div>
+        <a href="/" className="summary__restart">Restart Game</a>
       </section>
     </Modal>
   )
