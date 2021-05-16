@@ -57,7 +57,7 @@
       box-shadow: 4px 4px 4px 0px rgba(#000000, 0.25);
   
       &:disabled {
-        background-color: $text__secondary--black;
+        background-color: $bg__primary--gray;
         color: $text__primary--white;
         pointer-events: none;
       }

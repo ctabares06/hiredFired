@@ -1,0 +1,28 @@
+@import '../../assets/scss/vars';
+
+.end-game {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+
+  &__button {
+    background-color: $text__alter--black;
+    color: $text__primary--white;
+    padding: .5em .75em;
+    border: none;
+    box-shadow: 4px 4px 4px 0px rgba(#000000, .25);
+    cursor: pointer; 
+    transition: ease-in-out all .3s;
+
+    &:hover {
+      background-color: $text__secondary--black;
+    }
+
+    &:disabled {
+      background-color: #8e8e8e;
+      pointer-events: none;
+    }
+
+  }
+}
