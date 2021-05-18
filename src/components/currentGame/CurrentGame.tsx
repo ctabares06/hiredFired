@@ -6,10 +6,10 @@ import './CurrentGame.scss';
 const CurrentGame: React.FC = () => {
 
   useEffect(() => {
-    if (window.innerWidth <= 1200) {
+    if (window.innerWidth <= 1400) {
       document.getElementById('app-resume')?.classList.remove('resume--active');
     }
-  })
+  }, []);
 
   const { maxFired, maxHired } = useContext(GameContext)!.limits;
   const { curriculums, hired, fired } = useContext(CurriculumsContext)!.states;

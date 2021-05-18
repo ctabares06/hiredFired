@@ -16,3 +16,15 @@
 
   }
 }
+
+@media screen and (max-width : $s-mobile) {
+  .header {
+    font-size: .9rem;
+
+    &__title {  
+      &--fixed {
+        margin-left: -19px;
+      }
+    }
+  }
+}

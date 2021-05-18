@@ -25,6 +25,8 @@
   align-items: center;
 
   &__body {
+    max-width: 800px;
+    width: 100%;
     transform: translateY(-150%);
   }
 

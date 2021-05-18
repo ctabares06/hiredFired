@@ -1,10 +1,10 @@
 @import "../../assets/scss/vars";
 
 .card-cv {
-  font-size: 1rem;
+  font-size: .9rem;
   background-color: $bg__primary--white;
   box-shadow: 6px 6px 3px 0px rgba(#000000, 0.25);
-  width: 260px;
+  width: 200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -83,4 +83,11 @@
     }
   }
 
+}
+
+@media screen and (max-width : $mobile) {
+  .card-cv {
+    width: 280px;
+    font-size: 1em;
+  }
 }

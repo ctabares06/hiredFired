@@ -44,3 +44,10 @@
   }
 }
 
+@media screen and (max-width: $s-mobile) {
+  .nav {
+    font-size: .9em;
+    margin-bottom: 20px;
+  }
+}
+

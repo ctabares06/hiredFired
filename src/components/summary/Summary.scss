@@ -2,6 +2,7 @@
 
 .summary {
   max-width: 800px;
+  margin: 0 1.5em;
   background-color: $bg__primary--white;
   padding: 1em;
 
@@ -65,4 +66,16 @@
     }
   }
 
+}
+
+@media screen and (max-width: 760px) {
+  .summary {
+    &__resume {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      width: 100%;
+      justify-content: flex-start;
+      padding: 0;
+    } 
+  }
 }
