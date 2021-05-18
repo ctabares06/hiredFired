@@ -6,6 +6,7 @@ import Header from '../components/header/Header';
 import Summary from '../components/summary/Summary';
 import CurrentGame from '../components/currentGame/CurrentGame';
 import EndGameButton from '../components/endGameButton/EndGameButton';
+import ScrollTop from '../components/scrollTop/ScrollTop';
 
 const Router: React.FC = () => {
 
@@ -13,6 +14,7 @@ const Router: React.FC = () => {
     <>
       <Header />
       <div className="main-content-page">
+        <ScrollTop />
         <main className="page-container">
           <Switch>
             <Route exact path="/">
