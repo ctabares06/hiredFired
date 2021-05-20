@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { typeStats } from '../../types';
 import { formatMonetary, formatNumberDecimals } from '../../utils/formatNumbers';
 import './CurriculumStats.scss';
 
 const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => {
+
+  const formatedScore = useMemo(() => formatNumberDecimals(score), [score]);
+  const formatedSalary = useMemo(() => formatMonetary(salary), [salary]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,7 +38,7 @@ const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => 
             <i className="stats__item__icon stats__item__icon--cross"></i> Score
           </span>
           <span>
-            {formatNumberDecimals(score)}
+            {formatedScore}
           </span>
         </li>
         <li className="stats__item">
@@ -43,7 +46,7 @@ const CurriculumStats: React.FC<typeStats> = ({ score, salary, pros, cons }) => 
             <i className="stats__item__icon stats__item__icon--cross"></i> Salary
           </span>
           <span>
-            {formatMonetary(salary)}
+            {formatedSalary}
           </span>
         </li>
         <li>
